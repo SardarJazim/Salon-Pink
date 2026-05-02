@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Pacifico&family=Inter:wght@400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
+  --font-retro: 'Righteous', sans-serif;
+  --font-script: 'Pacifico', cursive;
+
+  --color-soft-pink: #F8C8DC;
+  --color-hot-pink: #FF69B4;
+  --color-pop-yellow: #FFFF00;
+  --color-pop-blue: #00FFFF;
+
+  --animate-float: float 3s ease-in-out infinite;
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+}
+
+body {
+  @apply font-sans bg-white text-black;
+}
+
+h1, h2, h3, h4 {
+  @apply font-retro uppercase tracking-wider;
+}
+
+.retro-shadow {
+  box-shadow: 4px 4px 0px 0px #000000;
+}
+
+.retro-shadow-hover:hover {
+  box-shadow: 6px 6px 0px 0px #000000;
+  transform: translate(-2px, -2px);
+}
+
+.dot-pattern {
+  background-image: radial-gradient(#FF69B4 1px, transparent 1px);
+  background-size: 20px 20px;
+}
